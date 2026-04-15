@@ -1,5 +1,5 @@
-a = 21
+a = 100
 print('a:', a)
 
-message = ('hello world')
+message = ('Hello world!')
 print(message)
