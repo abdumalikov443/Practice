@@ -17,3 +17,15 @@ Learning Git and Python Foundation
  git push origin master
  git pull origin master
 ```
+
+
+## Python Foundation:
+
+- Primitiva VAriables
+- Function
+- Object
+- CLass
+- Class deep dive
+- Operation & Conditions
+- Loops
+- ...
