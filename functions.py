@@ -12,18 +12,32 @@ print("====== DEFINE (parameter) vs CALL (argument) =====")
 
 
 # DEFINE - parameter
-def greet(a): # void
+def greet(a):  # void
     print(f"How do you do, {a}?")
 
 
-def greeting(b): # return
+def greeting(b):  # return
     print("greeting is executed")
     return f"Hi {b}"
 
 
-# CALL - argument 
+# CALL - argument
 r = greet('Andrew')
 print(r)
 
 r2 = greeting('Mike')
 print(r2)
+
+
+print("====== Keyword & default arguments =====")
+# DEFINE
+def give_greet(name, age=20):
+    print("give_greet is executed!")
+    return f"Hi {name}, you are {age} years old"
+
+
+r3 = give_greet("Andrew", 20)
+print(r3)
+
+r4 = give_greet("Andrew")
+print(r4)
