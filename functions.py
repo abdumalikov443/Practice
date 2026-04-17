@@ -5,7 +5,7 @@
     (4) Scope
 '''
 
-print("====== DEFINE (parameter) vs CALL (argument) =====")
+print("\n====== DEFINE (parameter) vs CALL (argument) =====")
 # build in function > print() type()
 # Function > reusable block of code
 # Instead of block {} in Java, Python uses Indentation
@@ -29,7 +29,8 @@ r2 = greeting('Mike')
 print(r2)
 
 
-print("====== Keyword & default arguments =====")
+print("\n====== Keyword & default arguments =====")
+
 # DEFINE
 def give_greet(name, age=20):
     print("give_greet is executed!")
@@ -41,3 +42,16 @@ print(r3)
 
 r4 = give_greet("Andrew")
 print(r4)
+
+
+print(" \n====== Scope =====")
+b = 48 # 3
+
+# DEFINE
+def calculate(a): # 2
+    c = a * b # 1
+    print(f"the c value: {c}")
+
+
+# CALL
+calculate(17)
