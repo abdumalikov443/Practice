@@ -11,7 +11,8 @@ print("====== What is class ======")
 
 class Person():
     # state
-    message = "static state property"  # objectga boglanmagan va class bn birga keladigan static state hisoblanadi
+    # objectga boglanmagan va class bn birga keladigan static state hisoblanadi
+    message = "static state property"
 
     # constructor
     def __init__(self, name, age):  # self--> person classdan yaratilgan object ga qaratilgan
@@ -50,3 +51,48 @@ print(f"result: {new_message}")
 
 # static method
 Person.explain()
+
+
+print("\n====== special | magic methods ======")
+# Python's most common special methods are below:
+# __str__ __init__ __len__ __new__ __call__ __getitem__ ...
+
+
+class Car():
+    # state
+    description = "This class makes cars"
+
+    # contructor
+    def __new__(cls, *args):
+        print("* __new__ *")
+        return super().__new__(cls)
+
+    def __init__(self, name, year):
+        self.name = name
+        self.year = year
+
+    # method
+
+    def start_engine(self):
+        print(f"The {self.name} started engine!")
+
+    def stop_egine(self):
+        print(f"The {self.name} stopped engine!")
+
+    def __str__(self):
+        return f"The {self.name} was produced in {self.year} year!"
+
+    def __call__(self):
+        print("object called as a function")
+        return True
+
+
+my_car = Car("Porsche", 2025)
+my_car.start_engine()
+my_car.stop_egine()
+
+print('------')
+m_car = Car("Dodge", 2023)
+print(m_car)
+r = m_car()  # look like a function
+print("Result:", r)
