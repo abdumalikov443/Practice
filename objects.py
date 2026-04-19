@@ -27,3 +27,23 @@ print(f" \nresult1: {r1}")
 
 r2 = math.ceil(33.73)
 print(f" \nresult2: {r2}")
+
+
+
+print("\n======= Error handling system =======")
+
+car_dict = dict(name='Toyota', year=2024, electric=False)
+
+try: 
+    print("Passed here") # birinchi bu print bo'ladi ishlamasa err ni print qiladi
+    a = car_dict.speed
+    r = car_dict['year']
+    print('result: ', r)
+except KeyError as err:
+    print("No origin state property found: ", err)
+except AttributeError as err:
+    print("No speed found:", err)
+else: 
+    print("Executed succesfully without errors")
+finally:
+    print("Final logic")
