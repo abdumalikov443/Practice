@@ -8,6 +8,7 @@ print("===== INHERITENCE =====")
 # PARENT --> CHILD
 # Parent allows to use only public & protected properties to child class
 
+
 class Animal:
     description = "This class is parent for animals"
 
@@ -31,6 +32,9 @@ class Dog(Animal):  # CHILD
 
     def protect(self):
         print("Yes, I can protect you")
+
+    def make_voice(self):
+        print(f"The {self.name} says: {self.sound}")
 
 
 class Cat(Animal):  # CHILD
@@ -80,3 +84,26 @@ print(Animal.description)
 
 print(dog.voice, fish.voice)
 print("dog.status:", dog._status)
+
+# bir narsaning bir necha xil shaklga ega bo'lishi
+print("===== POLYMORPHISM =====")
+
+dog.make_voice()
+fish.make_voice()
+
+print("------")
+
+
+#fish > Fish > Animal > object
+
+a = isinstance(fish, Fish)
+b = isinstance(fish, Animal)
+c = isinstance(fish, object)
+d = isinstance("MIT", object)
+r = a and b and c and d
+print("result:", r)
+
+# Fish > Animal > object
+data1 = issubclass(Fish, Animal)
+data2 = issubclass(Animal, object)
+print("data: ", data1, data2)
