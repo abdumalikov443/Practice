@@ -79,7 +79,7 @@ class Car():
     def stop_egine(self):
         print(f"The {self.name} stopped engine!")
 
-    def __str__(self):
+    def __str__(self):  # object ni string holatidagi ko'rinishi 
         return f"The {self.name} was produced in {self.year} year!"
 
     def __call__(self):
