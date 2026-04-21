@@ -1,3 +1,26 @@
+/* C-TASK (NodeJS)
+
+  ⭐Savol: Shunday function tuzing, u 2ta string parametr ega bolsin, 
+  hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+  MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+*/
+
+// ⭐ Masalaning yechimi:
+function checkContent(a, b) { 
+  const arr1 = [...a].sort()
+  const arr2 = [...b].sort() 
+  console.log(arr1, arr2)
+  return arr1.join('') === arr2.join('') 
+}
+
+
+const result = checkContent("cmldeteop", "completed")
+console.log(`RESULT: ${result}`)  
+
+
+
+
+
 /* B-TASK (Nodejs):
 
   ⭐Savol: Shunday function tuzing, u 1ta string parametrga ega bolsin, 
@@ -5,7 +28,7 @@
     MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 */
 
-// ⭐ Masalaning yechimi:
+/* ⭐ Masalaning yechimi:
 function countDigits(str) {
   const arr = [...str]
   const c = arr.filter(ele => ele >= '0' && ele <= '9') 
@@ -14,7 +37,7 @@ function countDigits(str) {
 
 const result = countDigits('ad2a58jk49u54y79wet0sfgb9')
 console.log(`RESULT: ${result}`)
-
+*/
 
 
 
