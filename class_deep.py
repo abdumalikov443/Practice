@@ -1,7 +1,7 @@
 ''' CLASS deep dive
     (1) ENCAPSULATION
     (2) INHERITENCE
-    (3) PLOYMORPHISM
+    (3) POLYMORPHISM
 '''
 
 print("===== ENCAPSULATION =====")
@@ -16,19 +16,19 @@ class Account():
     # constructor
     def __init__(self, owner, amount):
         self.__owner = owner
-        self._amount = amount
+        self.__amount = amount
 
     # method
     def get_balance(self):
-        print(f"The owner {self.__owner} has {self._amount} usd")
+        print(f"The owner {self.__owner} has {self.__amount} usd")
 
     def deposit(self, amount):
         print("deposit:", amount)
-        self._amount += amount
+        self.__amount += amount
 
     def withdraw(self, amount):
         print("withdraw:", amount)
-        self._amount -= amount
+        self.__amount -= amount
 
     @property 
     def holder(self): # state | objectni ichidagi maxfiy data larni olib beradi 
@@ -37,7 +37,7 @@ class Account():
     @holder.setter
     def holder(self, new_owner):
         print("holder.setter:", new_owner)
-        self._owner = new_owner
+        self.__owner = new_owner
 
     def change_ownership(self, new_owner):
         print("change_ownership:", new_owner)
