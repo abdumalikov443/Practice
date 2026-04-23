@@ -34,9 +34,11 @@ print("===== Unpacking arguments =====")
 groups = ["MIT", "FLEXY", "DEVEX", "MG"]
 (x, y, *z) = groups
 print(f"the x: {x} and y: {y}")
-print("z:", z) # list
+print("z:", z)  # list
 
 # *args > tuple
+
+
 def calculate(*args):
     print("*args >", args)
     total = 1
@@ -45,9 +47,24 @@ def calculate(*args):
     print(f"the total value: {total}")
     return total
 
+
 # CALL
 calculate(1, 3, 6, 5)
 print("-----")
 calculate(0, 3, 200)
 print("-----")
 calculate(5, 9)
+
+print("-----")
+# **kwargs > dictionary
+
+
+def introduce(**kwargs):
+    print(f"the type(**kwargs) : {type(kwargs)}")
+    print(f"Hi, i am {kwargs["name"]} and i am {kwargs["age"]} years old")
+    pass
+
+
+# CALL
+introduce(name="Andrew", age=20)
+introduce(name="Shawn", age=32, single=True)
