@@ -5,7 +5,7 @@
 '''
 
 print("===== for operator =====")
-# Iterable objects > string dict tuple list range map filter
+# Iterable objects > string dict tuple zip list range map filter
 
 text = "MIT"
 nums = [12, 4, 7, 3]
@@ -21,7 +21,7 @@ for n in nums:
 
 print("-----")
 for key in car_object:
-    print(f" The key: {key} => it's value: {car_object.get(key)}")
+    print(f" The key: {key} => it's value: {car_object['brand']}")
 
 
 print("===== break / else =====")
@@ -40,17 +40,17 @@ while num < 50:
     num += 8
     print(f"The num equals to {num}")
 
-print("-----")
-count = 0
-while True:
-    count += 1
-    x = int(input("Predict the number: "))
+# print("-----")
+# count = 0
+# while True:
+#     count += 1
+#     x = int(input("Predict the number: "))
 
-    if x == 41:
-        print(f"You found the number in {count} steps")
-        break
-    else:
-        print("Wrong number, please try again!")
+#     if x == 41:
+#         print(f"You found the number in {count} steps")
+#         break
+#     else:
+#         print("Wrong number, please try again!")
 
 
 # Xulosa: For qachonki step(urunishlar) soni aniq bo'lsa ishlatiladi, while esa urunishlar soni noma'lum bo'lganda ishlatiladi
