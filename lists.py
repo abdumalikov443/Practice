@@ -92,7 +92,6 @@ print(f"numbs: {numbs} and new_nums: {new_nums}")
 
 print("\n===== Lambda function =====")
 # lambda is small anonymous function!
-
 def calculate(x, y): return x * y
 
 result = calculate(3, 5)
@@ -105,12 +104,58 @@ people = [
     ("Joseph", 25),
     ("Michael", 1),
     ("Ali", 40)
-]  
+]
 
 people.sort()
 print("people1:", people)
 
 # sort by age via lambda function
-people.sort(key = lambda person: person[1])
+people.sort(key=lambda person: person[1])
 print("people2:", people)
 
+print("===== Enumerate, map & filter =====")
+# enumerate for index & value
+
+animals = ["dog", "cat", "fish"]   # list
+for i in enumerate(animals):
+    print("value:", i)
+
+print("-------")
+for (index, value) in enumerate(animals):
+    print(f"index: {index} and value: {value}")
+
+print("-------")
+# similar in dictionaries
+car_obj = dict(brand="Ferrari", year=2026)
+result = car_obj.items()
+for (key, value) in result:
+    print(f"key: {key} and value: {value}")
+
+
+print("-----")
+# map
+cars = [
+    ("Ferrari", 78),
+    ("Toyota", 87),
+    ("Audi", 116),
+    ("BMW", 106),
+    ("Pagani", 33),
+]
+
+
+# new_cars = []
+# for car in cars:
+#     new_cars.append(car[0])
+# print("new_cars:", new_cars)
+
+result_map = map(lambda car: car[0], cars)  # map object qaytaradi
+print(f"the result map: {result_map} and type: {type(result_map)}")
+new_cars = list(result_map)
+print("new cars 2:", new_cars)
+
+print("-----")
+# filter
+
+result_filter = filter(lambda car: car[1] > 80, cars)
+print(f"the result filter: {result_filter} and type: {type(result_filter)}")
+print(list(result_filter))
