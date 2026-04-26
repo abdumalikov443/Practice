@@ -12,6 +12,9 @@ nums = [1, 5, 8, 2]
 print(nums)
 
 # constructor
+letter = list("Hello World")
+
+
 fruits = ["apple", "lemon", "banana", "kiwi"]
 print("before fruits:", fruits)
 
