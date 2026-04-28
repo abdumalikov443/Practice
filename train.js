@@ -1,3 +1,30 @@
+/* F-TASK (NodeJS)
+
+  ⭐Savol: Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, 
+  agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+  MASALAN: getReverse("hello") return true return qiladi
+*/ 
+
+// ⭐ Masalaning yechimi:
+function findDoublers(str){
+  let arr = [...str]
+  
+  for (let a = 0; a < arr.length; a++) {
+    for (let b = a + 1; b < arr.length; b++) {
+      if (arr[a] === arr[b]) {
+        return true
+      }
+    }
+  }
+  return false
+}
+
+const result = findDoublers("hello")
+console.log(`Result --> ${result}`)
+//
+
+
+
 /* E-TASK (NodeJS)
 
   ⭐Savol: Shunday function tuzing, u bitta string argumentni qabul qilib 
@@ -5,7 +32,7 @@
   MASALAN: getReverse("hello") return qilsin "olleh"
 */
 
-// ⭐ Masalaning yechimi:
+/* ⭐ Masalaning yechimi:
 function getReverse(str){
   output = ""
   for (char of str) {
@@ -16,7 +43,7 @@ function getReverse(str){
 
 const result = getReverse("mitask")
 console.log(`Result --> ${result}`)
-//
+*/
 
 
 
