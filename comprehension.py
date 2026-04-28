@@ -1,6 +1,6 @@
 ''' Comprehension
     (1) What is comprehension & list comprehension
-    (2) set and dictionary comprehension
+    (2) Set and Dictionary comprehension
 '''
 
 print("===== What is comprehension & list comprehension =====")
@@ -34,5 +34,20 @@ cars = [
     ("BMW", 106),
     ("Pagani", 33),
 ]
-list_cars = [car[0] for car in cars if car[1] > 80]
+list_cars = [car[0] for car in cars if car[1] > 80]  # c version
 print("list_cars:", list_cars)
+
+
+print("\n===== Set and dictionary comprehension =====")
+nums = [1, 4, 5, 9, 1, 4, 7, 5, 3]
+set_nums = {*nums}
+print("set_nums:", set_nums)
+
+
+dict_people = {person[0]: person[1] for person in people}  # a version
+print("dict_people:", dict_people)
+
+dict_people2 = {person[0]: person[1] for person in people if person[1] > 20}  # b version
+print("dict_people 2:", dict_people2)
+
+# (<expression> for item in iterable) generic type -->  katta hajmdagi ma'lumotlar to'plamini hosil qilish uchun ishlatiladi
