@@ -12,11 +12,11 @@ print("===== Python Packages & Core Packages =====")
 # Core Packages > https://docs.python.org/3/library
 
 # Core package
-# t = turtle.Turtle()
-# t.shape("turtle")
-# t.speed(2)
-# t.circle(150)
-# turtle.done()
+t = turtle.Turtle()
+t.shape("turtle")
+t.speed(2)
+t.circle(150)
+turtle.done()
 
 print("-----")
 
@@ -34,7 +34,7 @@ with open("material/sample.txt", "r") as your_file:
 
 print("Done")
 
-print("===== Package Manager & External Package =====")
+print("\n===== Package Manager & External Package =====")
 ''' Package Managers: pip pipenv npm yarn composer brew '''
 # External package > https://pypi.org/
 
@@ -44,3 +44,14 @@ with Image.open("material/parzival.jpg") as img:
     resized_img.save("material/sample.png")
 
 
+print("\n===== Debugging =====")
+
+def get_sum(*args): # DEFINE
+    total_amount = 0
+    for a in args:
+        total_amount += a
+        return total_amount # find/solve the bug via debugging
+
+test = 100
+result = get_sum(1, 2, 3, 5, 6) # CALL
+print("Result:", result)
