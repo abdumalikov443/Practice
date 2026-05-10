@@ -1,3 +1,23 @@
+''' K-TASK (PYTHON)
+
+    ⭐ Savol: Shunday function yozing, u string qabul qilsin va 
+    string ichidagi eng uzun sozni qaytarsin.
+    MASALAN: find_longest("I come from Uzbekistan") return "Uzbekistan" 
+'''
+
+''' Masalaning yechimi '''
+def find_longest(str):
+    word = ""
+    
+    for item in str.split():
+        if len(item) > len(word):
+            word = item
+    return word
+
+result = find_longest("I come from Uzbekistan") 
+print(f'The result: {result}')
+
+
 ''' I-TASK (PYTHON)
 
     ⭐ Savol: Shunday function tuzing, unga string argument pass bolsin. 
@@ -6,16 +26,16 @@
 '''
 
 ''' Masalaning yechimi '''
-def get_digits(str):
-    nums = []
-    for i in str:
-        if '0' < i < '9':
-            nums.append(i)
-    return ''.join(nums)
+# def get_digits(str):
+#     nums = []
+#     for i in str:
+#         if '0' < i < '9':
+#             nums.append(i)
+#     return ''.join(nums)
 
 
-result = get_digits("m14i1t") 
-print(f'The result: {result}')
+# result = get_digits("m14i1t") 
+# print(f'The result: {result}')
 
 
 
